@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insta</title>
+
+  <style>
+    body {
+        /* A cute, soft pink background color */
+            background-color: #fce4ec; 
+            
+            /* This creates the repeating heart pattern in the background */
+            background-image:
+                radial-gradient(circle at 100% 150%, #fce4ec 24%, #fff 25%, #fff 28%, #fce4ec 29%, #fce4ec 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+                radial-gradient(circle at 0 150%, #fce4ec 24%, #fff 25%, #fff 28%, #fce4ec 29%, #fce4ec 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+                radial-gradient(circle at 50% 100%, #fff 10%, #fce4ec 11%, #fce4ec 23%, #fff 24%, #fff 30%, #fce4ec 31%, #fce4ec 43%, #fff 44%, #fff 50%, #fce4ec 51%, #fce4ec 63%, #fff 64%, #fff 71%, transparent 71%, transparent),
+                radial-gradient(circle at 100% 50%, #fff 5%, #fce4ec 6%, #fce4ec 15%, #fff 16%, #fff 20%, #fce4ec 21%, #fce4ec 35%, #fff 36%, #fff 43%, transparent 43%, transparent),
+                radial-gradient(circle at 0 50%, #fff 5%, #fce4ec 6%, #fce4ec 15%, #fff 16%, #fff 20%, #fce4ec 21%, #fce4ec 35%, #fff 36%, #fff 43%, transparent 43%, transparent);
+            background-size: 100px 50px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    button {
+      padding: 20px 30px;
+      font-size: 20px;
+      color: #790782; /* A lovely deep pink color */
+      margin: 20px;
+      cursor: pointer;
+    }
+    h1 {
+  color: #e91e63;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Do You Love Me?</h1>
+
+  <button class="no-button" onclick="handleNoClick()">No</button>
+  <button class="yes-button" onclick="handleYesClick()">Yes</button>
+
+  <script>
+    let messageIndex = 0;
+
+    const messages = [
+      "Are you sure?",
+      "Think again!",
+      "Really sure?",
+      "Last chance!"
+    ];
+
+    function handleNoClick() {
+      const noButton = document.querySelector('.no-button');
+      const yesButton = document.querySelector('.yes-button');
+
+      noButton.textContent = messages[messageIndex];
+      messageIndex = (messageIndex + 1) % messages.length;
+
+      const currentSize = parseFloat(
+        window.getComputedStyle(yesButton).fontSize
+      );
+
+      yesButton.style.fontSize = `${currentSize * 1.5}px`;
+    }
+    function handleYesClick() {
+      window.location.href = "page1_celebration.html";
+
+    }
+    
+  </script>
+  
+</body>
+</html>
