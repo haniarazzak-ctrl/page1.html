@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Memories</title>
+<style>
+  body {
+    background-color: #fce4ec; 
+            
+    /* This creates the repeating heart pattern in the background */
+    background-image:
+        radial-gradient(circle at 100% 150%, #fce4ec 24%, #fff 25%, #fff 28%, #fce4ec 29%, #fce4ec 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+        radial-gradient(circle at 0 150%, #fce4ec 24%, #fff 25%, #fff 28%, #fce4ec 29%, #fce4ec 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+        radial-gradient(circle at 50% 100%, #fff 10%, #fce4ec 11%, #fce4ec 23%, #fff 24%, #fff 30%, #fce4ec 31%, #fce4ec 43%, #fff 44%, #fff 50%, #fce4ec 51%, #fce4ec 63%, #fff 64%, #fff 71%, transparent 71%, transparent),
+        radial-gradient(circle at 100% 50%, #fff 5%, #fce4ec 6%, #fce4ec 15%, #fff 16%, #fff 20%, #fce4ec 21%, #fce4ec 35%, #fff 36%, #fff 43%, transparent 43%, transparent),
+        radial-gradient(circle at 0 50%, #fff 5%, #fce4ec 6%, #fce4ec 15%, #fff 16%, #fff 20%, #fce4ec 21%, #fce4ec 35%, #fff 36%, #fff 43%, transparent 43%, transparent);
+    background-size: 100px 50px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+  }
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  .polaroids {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .polaroid {
+    background: white;
+    padding: 10px 10px 25px;
+    width: 200px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transform: rotate(-3deg);
+  }
+
+  .polaroid:nth-child(2) { transform: rotate(2deg); }
+  .polaroid:nth-child(3) { transform: rotate(-1deg); }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+</style>
+</head>
+
+<body>
+  <h1>📸 Moments Our Heart Will Hold Onto Forever</h1>
+
+  <div class="polaroids">
+    <div class="polaroid">
+      <img src="pic1.jpg">
+      <p>One of my favorites 💖</p>
+    </div>
+
+    <div class="polaroid">
+      <img src="pic2.jpg">
+      <p>This moment 🥹</p>
+    </div>
+
+    <div class="polaroid">
+      <img src="pic3.jpg">
+      <p>Holding hands forever ✨</p>
+    </div>
+  </div>
+</body>
+</html>
