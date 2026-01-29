@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary!</title>
+    <style>
+        /* This section is for styling the page */
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        body {
+            /* A cute, soft pink background color */
+            background-color: #fce4ec; 
+            
+            /* This creates the repeating heart pattern in the background */
+            background-image:
+                radial-gradient(circle at 100% 150%, #fce4ec 24%, #fff 25%, #fff 28%, #fce4ec 29%, #fce4ec 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+                radial-gradient(circle at 0 150%, #fce4ec 24%, #fff 25%, #fff 28%, #fce4ec 29%, #fce4ec 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+                radial-gradient(circle at 50% 100%, #fff 10%, #fce4ec 11%, #fce4ec 23%, #fff 24%, #fff 30%, #fce4ec 31%, #fce4ec 43%, #fff 44%, #fff 50%, #fce4ec 51%, #fce4ec 63%, #fff 64%, #fff 71%, transparent 71%, transparent),
+                radial-gradient(circle at 100% 50%, #fff 5%, #fce4ec 6%, #fce4ec 15%, #fff 16%, #fff 20%, #fce4ec 21%, #fce4ec 35%, #fff 36%, #fff 43%, transparent 43%, transparent),
+                radial-gradient(circle at 0 50%, #fff 5%, #fce4ec 6%, #fce4ec 15%, #fff 16%, #fff 20%, #fce4ec 21%, #fce4ec 35%, #fff 36%, #fff 43%, transparent 43%, transparent);
+            background-size: 100px 50px;
+
+            /* This makes sure everything is centered perfectly on the page */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Hides scrollbars */
+            font-family: 'Pacifico', cursive; /* A cute, cursive font */
+        }
+
+        /* Styling for the main link that covers the page */
+        .page-link {
+            text-decoration: none; /* Removes the underline from the link */
+            color: inherit; /* Makes the text color the same as the parent */
+            text-align: center;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* A semi-transparent white background */
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px); /* A cool blurry glass effect */
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .page-link:hover {
+            transform: scale(1.05); /* Makes the box slightly larger when hovered */
+        }
+
+        /* Styling for the "Happy Anniversary!" text */
+        h1 {
+            font-size: 4rem; /* Makes the text large */
+            color: #e91e63; /* A lovely deep pink color */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Adds a subtle shadow to the text */
+        }
+
+        /* Styling for the teddy bear image */
+        .teddy-bear {
+            max-width: 250px; /* Controls the size of the teddy bear */
+            height: auto;
+            animation: float 6s ease-in-out infinite; /* Adds a gentle floating animation */
+        }
+        
+        /* The animation code for the floating effect */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- This link wraps the entire content. Clicking anywhere will lead to page2.html -->
+    <a href="page2.html" class="page-link">
+        
+        <!-- The main heading -->
+        <h1>Happy Anniversary!</h1>
+        
+        <!-- The cute teddy bear image -->
+        <img src="teddy.png" alt="Cute Teddy Bear with Flowers" class="teddy-bear">
+        
+    </a>
+
+</body>
+</html>
