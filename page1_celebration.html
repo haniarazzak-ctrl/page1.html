@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>You Said YES!</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background-color: #fce4ec; 
+            
+            /* This creates the repeating heart pattern in the background */
+            background-image:
+                radial-gradient(circle at 100% 150%, #fce4ec 24%, #fff 25%, #fff 28%, #fce4ec 29%, #fce4ec 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+                radial-gradient(circle at 0 150%, #fce4ec 24%, #fff 25%, #fff 28%, #fce4ec 29%, #fce4ec 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+                radial-gradient(circle at 50% 100%, #fff 10%, #fce4ec 11%, #fce4ec 23%, #fff 24%, #fff 30%, #fce4ec 31%, #fce4ec 43%, #fff 44%, #fff 50%, #fce4ec 51%, #fce4ec 63%, #fff 64%, #fff 71%, transparent 71%, transparent),
+                radial-gradient(circle at 100% 50%, #fff 5%, #fce4ec 6%, #fce4ec 15%, #fff 16%, #fff 20%, #fce4ec 21%, #fce4ec 35%, #fff 36%, #fff 43%, transparent 43%, transparent),
+                radial-gradient(circle at 0 50%, #fff 5%, #fce4ec 6%, #fce4ec 15%, #fff 16%, #fff 20%, #fce4ec 21%, #fce4ec 35%, #fff 36%, #fff 43%, transparent 43%, transparent);
+            background-size: 100px 50px;
+            
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: rgb(188, 30, 138);
+    animation: pop 1s ease-in-out infinite alternate;
+  }
+
+  @keyframes pop {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+  }
+
+  .heart {
+    position: absolute;
+    color: rgba(255,255,255,0.7);
+    font-size: 20px;
+    animation: floatUp 5s linear infinite;
+  }
+
+  @keyframes floatUp {
+    from { transform: translateY(100vh); opacity: 1; }
+    to { transform: translateY(-10vh); opacity: 0; }
+  }
+
+  button {
+    position: absolute;
+    bottom: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+</style>
+</head>
+
+<body>
+  <h1>🎉 YOU SAID YES 🎉</h1>
+  <button onclick="location.href='page4_no_escape.html'">Continue →</button>
+
+  <script>
+    for (let i = 0; i < 25; i++) {
+      let heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+      document.body.appendChild(heart);
+    }
+  </script>
+</body>
+</html>
